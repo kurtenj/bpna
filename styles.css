@@ -84,6 +84,10 @@ p {
   background-color: #103a66;
 }
 
+#logo {
+  height: 32px;
+}
+
 footer {
   display: flex;
   align-items: center;
@@ -116,8 +120,11 @@ footer {
 
 
 @media (max-width: 767px) {
-  .content, .footer-content {
-      width: 90%;
+  .content {
+    width: 80%;
+  }
+  .footer-content {
+    width: 80%;
   }
   h1 {
     font-size: 6em;

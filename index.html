@@ -1,47 +1,29 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;800&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body>
-        <div class="content">
+        <main class="content">
             <h1 id="title"></h1>
-            <p>
-                Like many of our Breezy Point neighbors, we've made this city our home for its friendly and peaceful neighborhoods, surrounded by breathtaking nature. While some of us may prefer to avoid politics, it's crucial to stay informed about our city's happenings. That's where Breezy Point Neighborhood Alliance comes in. We're here to provide a concise, monthly update on city activities along with occasional surveys to gather resident feedback. Subscribe below and join the alliance!
-            </p>
-            <div class="subscribe">
-                <input type="email" id="email" name="email" placeholder="Type your email">
-                <button type="button">Subscribe</button>
-            </div>
-        </div>
+            <section>
+                <p>
+                    Like many of our Breezy Point neighbors, we've made this city our home for its friendly and peaceful neighborhoods, surrounded by breathtaking nature. While some of us may prefer to avoid politics, it's crucial to stay informed about our city's happenings. That's where Breezy Point Neighborhood Alliance comes in. We're here to provide a concise, monthly update on city activities along with occasional surveys to gather resident feedback. Subscribe below and join the alliance!
+                </p>
+                <div class="subscribe">
+                    <input type="email" id="email" name="email" placeholder="Type your email">
+                    <button type="submit">Subscribe</button>
+                </div>
+            </section>
+        </main>
         <footer>
             <div class="footer-content">
-                <img style="height: 32px;" src="logo.svg" alt="Breezy Point Neighborhood Alliance Logo">
+                <img id="logo" src="logo.svg" alt="Breezy Point Neighborhood Alliance Logo">
                 <p>© Breezy Point Neighborhood Alliance</p>
             </div>
         </footer>
+        <script src="typewriter.js"></script>
     </body>
-    <script>
-        var i = 0;
-        var txt = 'By neighbors, for neighbors.';
-        var speed = 100; // Speed of the effect
-    
-        function typeWriter() {
-            if (i < txt.length) {
-                var span = document.createElement("span");
-                span.innerText = txt.charAt(i);
-                if (txt.charAt(i) === ".") {
-                    span.className = "end-period"; // Add a specific class to the period
-                }
-                document.getElementById("title").appendChild(span);
-                i++;
-                setTimeout(typeWriter, speed);
-            }
-        }
-    
-        // Call the function
-        typeWriter();
-    </script>
-       
 </html>
