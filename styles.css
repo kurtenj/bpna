@@ -7,11 +7,25 @@ html, body {
 body {
   font-family: 'Nunito Sans', sans-serif;
   background-color: #000000;
-  color: #aaa;
+  color: #ccc;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+}
+
+body::after {
+  content: "";
+  background: url('bpbg.JPG') no-repeat center center fixed; 
+  background-size: cover;
+  opacity: 0.50;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1; 
+  background: linear-gradient(to left, rgba(0,0,0,1) 15%, rgba(0,0,0,0) 100%), url('bpbg.JPG');
 }
 
 .content, .footer-content {
@@ -72,11 +86,11 @@ p {
 }
 
 .subscribe input:hover, .subscribe button:hover {
-  border-color: #888;
+  border-color: #aaa; /* light gray for higher contrast */
 }
 
 .subscribe input:active, .subscribe button:active {
-  border-color: #666;
+  border-color: #fff; /* white for highest contrast */
 }
 
 .subscribe button {
@@ -85,19 +99,22 @@ p {
   cursor: pointer;
   font-weight: 400;
   padding: 0 24px;
+  transition: background-color 0.3s ease; /* add transition for smoother color change */
 }
 
 .subscribe button:hover {
   background-color: #134a88;
+  color: #fff; /* white text on hover for higher contrast */
 }
 
 .subscribe button:active {
   background-color: #103a66;
+  color: #fff; /* white text when active for highest contrast */
 }
 
 .disclaimer {
   font-size: 0.9em;
-  color: #aaa;
+  color: #ccc;
   padding: 24px 0 0 0;
 }
 
