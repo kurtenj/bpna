@@ -5,29 +5,35 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;800&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="styles.css">
+        <link href="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css" rel="stylesheet">
+        <script src="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js"></script>
     </head>
     <body>
+        <div id="map"></div>
+        <div id="map-overlay"></div>
         <main class="content">
             <h1 id="title"></h1>
             <section>
                 <p>
-                    Like you, we live in Breezy Point for its friendly and peaceful neighborhoods, surrounded by breathtaking nature. We know that life is busy and keeping up with local politics is difficult. That's where Breezy Point Neighborhood Alliance comes in. We're here to provide a concise update on city meetings along with occasional surveys to gather resident feedback. Subscribe below for our monthly newsletter!
+                    We love Breezy Point for its friendly and peaceful neighborhoods, surrounded by breathtaking nature. We know that life is busy and keeping up with local politics is difficult. Breezy Point Neighborhood Alliance is here to help, providing a concise monthly update on city meetings. Subscribe below for our newsletter!
                 </p>
+            </section>
+            <section>
                 <div class="subscribe">
-                    <form action="https://tinyletter.com/neighbor" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/neighbor', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+                    <form action="https://buttondown.email/api/emails/embed-subscribe/neighbor" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/neighbor', 'popupwindow')" class="embeddable-buttondown-form">
                         <input type="email" id="email" name="email" placeholder="Enter your email...">
                         <button type="submit">Subscribe</button>
                     </form>
-                    <p class="disclaimer">❤️ We'll keep your email safe. Unsubscribe from the newsletter at any time.</p>
+                    <p class="disclaimer">❤️ Your email is safe with us, unsubscribe at any time.</p>
                 </div>
             </section>
         </main>
         <footer>
             <div class="footer-content">
                 <img id="logo" src="logo.svg" alt="Breezy Point Neighborhood Alliance Logo">
-                <p>© Breezy Point Neighborhood Alliance</p>
+                <p>Built and maintained by Breezy Point Alliance. No affiliation with the city of Breezy Point.</p>
             </div>
         </footer>
-        <script src="typewriter.js"></script>
+        <script src="main.js"></script>
     </body>
 </html>

@@ -1,35 +1,42 @@
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
+  height: 100vh;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;  /* Lowest layer */
+}
+
+#map-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);  /* semi-transparent black */
+  z-index: 1;  /* place it above the map, but below other content */
 }
 
 body {
   font-family: 'Nunito Sans', sans-serif;
   background-color: #000000;
-  color: #ccc;
+  color: #ddd;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
 }
 
-body::after {
-  content: "";
-  background: url('bpbg.JPG') no-repeat center center fixed; 
-  background-size: cover;
-  opacity: 0.60;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: fixed;
-  z-index: -1; 
-  background: linear-gradient(to left, rgba(0,0,0,1) 15%, rgba(0,0,0,0) 100%), url('bpbg.JPG');
-}
-
 .content, .footer-content {
   width: 60%;
+  position: relative;
+  z-index: 1;
 }
 
 .content {
@@ -38,6 +45,7 @@ body::after {
   flex-direction: column;
   justify-content: center;
   width: 60%;
+  gap: 2em;
 }
 
 h1 {
@@ -51,7 +59,7 @@ h1 {
 
 p {
   line-height: 1.5em;
-  padding: 20px 0;
+  padding: 0;
   font-size: 2em;
   margin: 0;
 }
@@ -114,8 +122,8 @@ p {
 }
 
 .disclaimer {
-  font-size: 0.9em;
-  color: #ccc;
+  font-size: 1em;
+  color: #eee;
   padding: 24px 0 0 0;
 }
 
@@ -128,14 +136,14 @@ footer {
   align-items: center;
   width: 100%;
   justify-content: center;
+  padding: 0 0 40px 0;
 }
 
 .footer-content {
   display: flex;
   align-items: center;
-  font-size: .5em;
-  padding: 20px 0 40px 0;
-  color: white;
+  font-size: 0.5em;
+  color: #ddd;
   justify-content: flex-start;
   flex-shrink: 0;
 }
@@ -155,20 +163,22 @@ footer {
 
 
 @media (max-width: 767px) {
+  
   .content {
     margin-top: 80px;
     width: 80%;
+    gap: 0.5em;
   }
 
   h1 {
     font-size: 2.8em;
-    padding: 10px 0;
+    padding: 0;
     min-height: 130px;
   }
   
   p {
     font-size: 1.25em;
-    padding: 10px 0;
+    padding: 20px 0;
   }
 
   .subscribe {
@@ -185,6 +195,11 @@ footer {
   .subscribe input, .subscribe button {
     width: 100%;
     margin: 8px 0;
+    font-size: 1em;
+  }
+
+  .disclaimer {
+    display: none;
   }
 
   .footer-content {
