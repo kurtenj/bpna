@@ -33,6 +33,26 @@ body {
   min-height: 100vh;
 }
 
+.banner {
+  background-color: #e63946;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+}
+
+.banner p {
+  margin: 0;
+  font-size: 1.25em;
+}
+
+.banner a {
+  color: white;
+}
+
 .content, .footer-content {
   width: 60%;
   position: relative;
@@ -46,6 +66,19 @@ body {
   justify-content: center;
   width: 60%;
   gap: 2em;
+}
+
+a {
+  color: white;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #fff;
+}
+
+a:hover {
+  color: #a8d1ff;
 }
 
 h1 {
@@ -75,6 +108,7 @@ p {
 .subscribe form {
   display: flex;
   gap: 8px;
+  width: 100%;
 }
 
 .subscribe input, .subscribe button {
@@ -125,6 +159,7 @@ p {
   font-size: 1em;
   color: #eee;
   padding: 24px 0 0 0;
+  width: 65%;
 }
 
 #logo {
@@ -142,10 +177,11 @@ footer {
 .footer-content {
   display: flex;
   align-items: center;
-  font-size: 0.5em;
+  font-size: 0.45em;
   color: #ddd;
   justify-content: flex-start;
   flex-shrink: 0;
+  gap: 2em;
 }
 
 .footer-content img {
@@ -177,9 +213,24 @@ footer {
     background: rgba(0, 0, 0, 0.6);  /* semi-transparent black */
     z-index: 1;  /* place it above the map, but below other content */
   }
+
+  body {
+    margin-top: 60px;
+  }
+
+  .banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .banner p {
+    width: 80%;
+    font-size: 1em;
+  }
   
   .content {
-    margin-top: 80px;
+    margin-top: 40px;
     width: 80%;
     gap: 0.5em;
   }
@@ -214,12 +265,17 @@ footer {
 
   .disclaimer {
     display: none;
+    width: 100%;
+  }
+  
+  footer {
+    width: 80%;
+    justify-content: left;
+    padding-bottom: 20px;
   }
 
   .footer-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    padding: 1em 0;
     font-size: .75em;
   }
 
