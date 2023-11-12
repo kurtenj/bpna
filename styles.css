@@ -4,25 +4,6 @@ html, body {
   height: 100vh;
 }
 
-#map {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 0;  /* Lowest layer */
-}
-
-#map-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.6);  /* semi-transparent black */
-  z-index: 1;  /* place it above the map, but below other content */
-}
-
 body {
   font-family: 'Nunito Sans', sans-serif;
   background-color: #000000;
@@ -69,21 +50,19 @@ body {
 }
 
 a {
-  color: white;
-  text-decoration: underline;
-}
-
-a:visited {
-  color: #fff;
+  color: #999;
+  text-decoration: none;
 }
 
 a:hover {
   color: #a8d1ff;
+  text-decoration: underline;
 }
 
 h1 {
   color: white;
-  font-weight: 800;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 700;
   font-size: 7em;
   line-height: 125%;
   margin: 0;
@@ -107,57 +86,87 @@ p {
 
 .subscribe form {
   display: flex;
-  gap: 8px;
+  gap: 16px;
   width: 100%;
 }
 
 .subscribe input, .subscribe button {
   flex-grow: 1;
   height: 50px;
-  padding: 12px 16px;
+  padding: 12px 0;
   font-size: 1.2em;
   border: none;
-  border-radius: 6px;
   box-sizing: border-box;
   appearance: none;
   outline: none;
   transition: border-color 0.3s ease;
 }
 
+.subscribe button {
+  flex-grow: 0;
+}
+
 .subscribe input {
+  background: none; /* Remove background */
+  border: none; /* Remove all borders */
+  border-bottom: 1.5px solid grey; /* Add grey bottom border */
+  color: #ddd; /* Text color */
+  padding: 12px 0;
+  font-size: 1.2em;
   min-width: 320px;
+  height: 50px;
+  box-sizing: border-box;
+  appearance: none;
+  outline: none;
+}
+
+.subscribe input:focus {
+  border-bottom-color: white; /* Change border color to white on focus */
+  background: none;
 }
 
 .subscribe input:hover, .subscribe button:hover {
-  border-color: #aaa; /* light gray for higher contrast */
+  color: white;
+  border-color: #fff; /* light gray for higher contrast */
+  background: none;
+  transition: 0.3s ease;
 }
 
 .subscribe input:active, .subscribe button:active {
-  border-color: #fff; /* white for highest contrast */
+  color: #134a88;
+  border-color: #134a88; /* white for highest contrast */
+  background: none;
 }
 
 .subscribe button {
-  background-color: #165aaa;
-  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  color: #134a88;
+  border: 1.5px solid #165aaa;
+  padding: 12px 24px;
+  font-size: 1.2em;
+  height: 50px;
+  border-radius: 12px;
   cursor: pointer;
-  font-weight: 400;
-  padding: 0 24px;
-  transition: background-color 0.3s ease; /* add transition for smoother color change */
+  box-sizing: border-box;
+  appearance: none;
+  outline: none;
 }
 
-.subscribe button:hover {
-  background-color: #134a88;
-  color: #fff; /* white text on hover for higher contrast */
+.subscribe button .material-icons {
+  margin-left: 8px; /* Space between text and icon */
+  transition: transform 0.3s ease; /* Transition for movement */
 }
 
-.subscribe button:active {
-  background-color: #103a66;
-  color: #fff; /* white text when active for highest contrast */
+.subscribe button:hover .material-icons {
+  transform: translateX(4px); /* Move icon on hover */
 }
 
 .disclaimer {
   font-size: 1em;
-  color: #eee;
+  color: #999;
   padding: 24px 0 0 0;
   width: 65%;
 }
@@ -178,7 +187,7 @@ footer {
   display: flex;
   align-items: center;
   font-size: 0.45em;
-  color: #ddd;
+  color: #999;
   justify-content: flex-start;
   flex-shrink: 0;
   gap: 2em;
@@ -199,20 +208,6 @@ footer {
 
 
 @media (max-width: 767px) {
-
-  #map, #map-overlay {
-    display: none;
-  }
-  
-  #map-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.6);  /* semi-transparent black */
-    z-index: 1;  /* place it above the map, but below other content */
-  }
 
   body {
     margin-top: 60px;

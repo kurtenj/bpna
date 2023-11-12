@@ -3,31 +3,27 @@
     <head>
         <link rel="icon" href="favicon.png" type="image/png">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;800&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@700&family=Nunito+Sans&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="styles.css">
-        <link href="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css" rel="stylesheet">
-        <script src="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body>
-        <div class="banner">
-            <p>Take a quick <a href="https://docs.google.com/forms/d/e/1FAIpQLSf8IGMysCmBlzyvGGGyLIlN7EEWJUsoeoqIEyy7Au5MI3dzeg/viewform?usp=sf_link" target="_blank">community survey</a> on city priorities and engagement! 📣</p>
-        </div>
-        <div id="map"></div>
-        <div id="map-overlay"></div>
         <main class="content">
             <h1 id="title"></h1>
             <section>
                 <p>
-                    Welcome to Breezy Point Neighborhood Alliance! In our friendly neighborhoods surrounded by breathtaking nature, we join together with a shared goal of holding our elected officials accountable to represent our needs and spend our hard-earned tax dollars responsibly. Join us for concise monthly updates, opportunities to discuss issues, and more. Together, we inform the agenda. Welcome to the alliance!
+                    Welcome to the Breezy Point Neighborhood Alliance! We're a friendly group of neighbors in Breezy Point, MN. Our mission is simple: we work together to ensure our city works for us. Join us for short monthly updates, chances to chat about important topics, and more. Together, we shape the future of our community. Welcome to the alliance!
                 </p>
             </section>
             <section>
                 <div class="subscribe">
                     <form action="https://buttondown.email/api/emails/embed-subscribe/neighbor" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/neighbor', 'popupwindow')" class="embeddable-buttondown-form">
                         <input type="email" id="email" name="email" placeholder="Enter your email...">
-                        <button type="submit">Subscribe</button>
+                        <button type="submit">Subscribe<i class="material-icons">arrow_forward</i></button>
                     </form>
-                    <p class="disclaimer"><a href="https://buttondown.email/neighbor/archive/" target="_blank">Preview the newsletter</a> before you subscribe. Your email is safe with us, unsubscribe at any time. ❤️ </p>
+                    <p class="disclaimer"><a href="https://buttondown.email/neighbor/archive/" target="_blank">📰 Preview the newsletter</a> before you subscribe.</p>
                 </div>
             </section>
         </main>
