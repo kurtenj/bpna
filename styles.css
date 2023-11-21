@@ -6,7 +6,7 @@ html, body {
 
 body {
   font-family: 'Nunito Sans', sans-serif;
-  background-color: #000000;
+  background-color: #050505;
   color: #ddd;
   display: flex;
   flex-direction: column;
@@ -50,12 +50,12 @@ body {
 }
 
 a {
-  color: #999;
+  color: #a8d1ff;
   text-decoration: none;
 }
 
 a:hover {
-  color: #a8d1ff;
+  color: #fff;
   text-decoration: underline;
 }
 
@@ -107,29 +107,24 @@ p {
 }
 
 .subscribe input {
-  background: none; /* Remove background */
-  border: none; /* Remove all borders */
-  border-bottom: 1.5px solid grey; /* Add grey bottom border */
-  color: #ddd; /* Text color */
-  padding: 12px 0;
+  background: none;
+  color: #ddd;
+  border: 1.5px solid #222;
+  padding: 12px 16px;
   font-size: 1.2em;
-  min-width: 320px;
-  height: 50px;
-  box-sizing: border-box;
-  appearance: none;
-  outline: none;
+  border-radius: 12px;
+  transition: border-color 0.3s ease, color 0.3s ease;
 }
 
 .subscribe input:focus {
-  border-bottom-color: white; /* Change border color to white on focus */
-  background: none;
+  border-color: #fff;
+  color: #fff;
 }
 
-.subscribe input:hover, .subscribe button:hover {
-  color: white;
-  border-color: #fff; /* light gray for higher contrast */
-  background: none;
-  transition: 0.3s ease;
+.subscribe input:hover {
+  background: #000;
+  color: #fff;
+  border-color: #aaa;
 }
 
 .subscribe input:active, .subscribe button:active {
@@ -153,6 +148,13 @@ p {
   box-sizing: border-box;
   appearance: none;
   outline: none;
+}
+
+.subscribe button:hover {
+  color: white;
+  border-color: #fff;
+  background: none;
+  transition: 0.3s ease;
 }
 
 .subscribe button .material-icons {
@@ -249,15 +251,11 @@ footer {
 
   .subscribe form {
     flex-direction: column;
-    gap: 0;
+    gap: 8px;
   }
 
   .subscribe input {
-    width: 100%;
-    margin: 8px 0;
-    font-size: 1em;
-    border-radius: 0;
-  }
+    background: none;
 
   .subscribe button {
     width: 100%;
@@ -266,19 +264,15 @@ footer {
   }
 
   .disclaimer {
-    display: none;
     width: 100%;
   }
   
   footer {
-    width: 80%;
-    justify-content: left;
-    padding-bottom: 20px;
+    display: none;
   }
 
   .footer-content {
-    padding: 1em 0;
-    font-size: .75em;
+    display: none;
   }
 
   .footer-content img {
