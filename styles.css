@@ -50,13 +50,17 @@ body {
 }
 
 a {
-  color: #a8d1ff;
-  text-decoration: none;
+  color: #096bde;
+  text-decoration: underline;
 }
 
 a:hover {
   color: #fff;
   text-decoration: underline;
+}
+
+.top-logo .d {
+  fill: ##096bde;
 }
 
 h1 {
@@ -107,9 +111,8 @@ p {
 }
 
 .subscribe input {
-  background: none;
+  background: #111111;
   color: #ddd;
-  border: 1.5px solid #222;
   padding: 12px 16px;
   font-size: 1.2em;
   border-radius: 12px;
@@ -117,20 +120,11 @@ p {
 }
 
 .subscribe input:focus {
-  border-color: #fff;
-  color: #fff;
+  background: #151515;
 }
 
 .subscribe input:hover {
-  background: #000;
-  color: #fff;
-  border-color: #aaa;
-}
-
-.subscribe input:active, .subscribe button:active {
-  color: #134a88;
-  border-color: #134a88; /* white for highest contrast */
-  background: none;
+  background: #151515;
 }
 
 .subscribe button {
@@ -138,8 +132,8 @@ p {
   align-items: center;
   justify-content: center;
   background: none;
-  color: #134a88;
-  border: 1.5px solid #165aaa;
+  color: #096bde;
+  border: 1.5px solid #096bde;
   padding: 12px 24px;
   font-size: 1.2em;
   height: 50px;
@@ -168,13 +162,9 @@ p {
 
 .disclaimer {
   font-size: 1em;
-  color: #999;
+  color: #666;
   padding: 24px 0 0 0;
   width: 65%;
-}
-
-#logo {
-  height: 24px;
 }
 
 footer {
@@ -189,7 +179,7 @@ footer {
   display: flex;
   align-items: center;
   font-size: 0.45em;
-  color: #999;
+  color: #666;
   justify-content: flex-start;
   flex-shrink: 0;
   gap: 2em;
@@ -212,7 +202,7 @@ footer {
 @media (max-width: 767px) {
 
   body {
-    margin-top: 60px;
+    margin-top: 24px;
   }
 
   .banner {
@@ -227,9 +217,15 @@ footer {
   }
   
   .content {
-    margin-top: 40px;
+    margin-top: 16px;
     width: 80%;
     gap: 0.5em;
+  }
+
+  .top-logo {
+    width: 40px;
+    height: auto;
+    margin-bottom: 24px;
   }
 
   h1 {
@@ -254,9 +250,6 @@ footer {
     gap: 8px;
   }
 
-  .subscribe input {
-    background: none;
-
   .subscribe button {
     width: 100%;
     margin: 8px 0;
@@ -264,18 +257,11 @@ footer {
   }
 
   .disclaimer {
-    width: 100%;
+    display: none;
   }
-  
+
   footer {
     display: none;
-  }
+  } 
 
-  .footer-content {
-    display: none;
-  }
-
-  .footer-content img {
-    display: none;
-  }
 }
